@@ -12,6 +12,7 @@
     }
 </style>
 <head> 
+    <link rel="stylesheet" type="text/css" href="estilos.css">
     <style>
         /* Estilos para el elemento canvas del gráfico */
         #miGrafico {
@@ -20,10 +21,21 @@
           width: 100%; /* Ancho del contenedor padre (responsive) */
           height: auto; /* Altura automática (proporcional al ancho) */
         }
+        .pete{
+          font-style: italic;
+          font-size: xx-large;
+          font-stretch:wider;
+          font: 100;
+          font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+          font-variant: small-caps;
+          font-kerning: initial;
+          flex: auto;
+          zoom: normal;
+        }
         .imagen-container {
             display: flex;
             justify-content: space-between;
-        }
+        }d
 
         .imagen {
             width: 700px; /* Establece el ancho de cada imagen */
@@ -32,14 +44,47 @@
             width: 300px; /* Set the width to your desired size (e.g., 300 pixels) */
             height: auto; /* Maintain aspect ratio (auto adjusts the height) */
         }
+        body {
+            
+            background-image: url('starfield.jpg');
+            background-repeat: repeat;
+            animation: moverFondo 10s linear infinite;
+        
+        }
+        .contenedor {
+    width: 100vw; /* Ancho igual al ancho de la ventana */
+    height: 100vh; /* Alto igual al alto de la ventana */
+    background-image: url('tu-imagen-fondo.jpg');
+    background-repeat: repeat;
+    animation: moverFondo 10s linear infinite, rotarFondo 10s linear infinite;
+}
+
+@keyframes moverFondo {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes rotarFondo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+   
       </style>
 
     <link rel="icon" type="image/x-icon" href="icono.ico">
-<body>
+<body class="pete">
    
     <div class="derecha">  
-
-        <h1>i need more bullets</h1>
+         <a href = "https://www.youtube.com/watch?v=GAPW_1sFt3U"> 
+        <h1>i need more bullets</h1></a>
        
     </div>
         <div class="centrado">
@@ -55,11 +100,23 @@
             </style>
         <a href="https://store.steampowered.com/app/1716740/STARFIELD/?l=spanish" target="_blank">
             <img src="starfield.jpg" alt="Descripción de la imagen">
+            
         </a>
-            <h2>Daglio llora</h2>
+            <h2>I like the Starfield</h2>
             <a href="https://www.metacritic.com/game/pc/starfield" target = "_blank">
             <img src="goty.jpg" alt="Descripción de la imagen">
         </a>
+       
+        <h2>  PORQUE JUGAR STARFIELD:</h2>
+        <div>
+        <ol>    
+            <li> Exploracion espacial</li>
+            <li> Narrativa inmersiva </li>
+            <li>Personalizacion de Naves y Personajes</li>
+            <li> Exploracion Planetaria</li>
+            <li> Combate en el espacio y en tierra</li>
+        </ol>
+         </div>
             <h2>
             Starfield GOTY 2023
             </h2>
@@ -69,7 +126,10 @@
             <img class="custom-image" src="download 1.gif" alt="Un gato adorable bailando"></a>
             <a href="https://fitgirl-repacks.site/baldurs-gate-3/" target="_blank">
             <img class="custom-image" src="download-button-gif-2.gif" alt="Un gato adorable bailando"></a>
-        <a>  
+
+         
+
+          
             <canvas id="miGrafico">
            
             </canvas>
@@ -84,9 +144,9 @@
                   datasets: [{
                     label: 'Calificacion',
                     data: [103, 35 , 97],
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de las barras
-                    borderColor: 'rgba(75, 192, 192, 1)', // Color del borde de las barras
-                    borderWidth: 1 // Ancho del borde de las barras
+                    backgroundColor: 'rgba(75, 192, 19, 1)', // Color de las barras
+                    borderColor: 'rgba(7, 192, 192, 1)', // Color del borde de las barras
+                    borderWidth: 10 // Ancho del borde de las barras
                   }]
                 };
               
@@ -109,7 +169,24 @@
               <div class="imagen-container">
                     <a href="https://www.1xbet.com" target="_blank" > 
                         <img src = "1xbet abajo.gif"> <a>
-                 
+                            <input type="text" id="nombre" name="nombre">
+                            <label for="comentario">Comentario:</label>
+<textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
+<input type="checkbox" id="suscribir" name="suscribir" value="si">
+<label for="suscribir">Juro jugar Starfield</label>
+<input type="radio" id="masculino" name="genero" value="masculino">
+<label for="masculino">Soy Gay (importante avisar)</label>
+<input type="radio" id="femenino" name="genero" value="femenino">
+<label for="femenino">Me gustan los ESP32</label>
+
+<label for="ciudad">Cual es el mejor programa de simulacion de circuitos</label>
+<select id="ciudad" name="ciudad">
+  <option value="los-angeles">Proteus</option>
+  <option value="chicago">Kicad</option>
+</select>
+<input type="submit" value="Enviar">
+<input type="hidden" name="usuario_id" value="123">
+
                 
                      <table border="1">  
                          <style> 
